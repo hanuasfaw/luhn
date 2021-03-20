@@ -66,7 +66,7 @@ int sum_numbers(vector<int> numbers) {
     @param card_number, the card number as a string.
     @return result, 0 if the card number is valid, 1 if not.
 */
-int Luhn(string card_number) {
+int luhn(string card_number) {
     // only get the required numbers from the card
     vector<int> numbers = split_numbers(card_number);
 
@@ -93,7 +93,7 @@ int main() {
     cin >> card_number;
 
     // run the Luhn algorithm
-    int result = Luhn(card_number);
+    int result = luhn(card_number);
 
     if(result == 0)
         cout << "This card number is valid!" << endl;
