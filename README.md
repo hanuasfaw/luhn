@@ -2,23 +2,23 @@
 
 by **Brehanu Bugg**
 
-Banks and websites that require card number information need an efficient way to quickly evaluate if the number a user inputs is valid. Many times, websites will evaluate the card number as the user types it in. This is all possible because of the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm). It is a simple, but powerful, checksum formula devloped by IBM scientist [Hans Peter Luhn](https://en.wikipedia.org/wiki/Hans_Peter_Luhn), for whom it is named after.
+Banks and websites that require card number information need an efficient way to quickly evaluate if the number a user inputs is valid. Many times, websites will evaluate the card number as the user is typing it in. This is all possible because of the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm). It is a simple, but powerful, checksum formula devloped by IBM scientist [Hans Peter Luhn](https://en.wikipedia.org/wiki/Hans_Peter_Luhn), for whom the algorithm is named after.
 
 ## Running the Program
 
-Once you've downloaded this project—either via GitHub or your command line—up a new terminal session and run the following command:
+Once you've downloaded this project—either via GitHub or your command line—open up a new terminal session and run the following command:
 
 `g++ --std=c++11 validator.cpp && ./a.out`
 
-The first half of the command—up to the &&—will compile the C++ code into a executable file. This will only need to be run once. The second half of the command—post &&—will execute program. If you want to run the program again, you just need to run `./a.out`.
+The first half of the command—up to the &&—will compile the C++ code into a executable file. This will only need to be run once. The second half of the command—post &&—will execute the program. If you want to run the program again, you just need to run the `./a.out` command.
 
 It will prompt you for a card number. When you click enter, it will immediately tell you if the number is valid or not. Your input is not stored locally or sent anywhere.
 
 ## The Algorithm
 
-Suppose a user inputs the card number `79927398713` into Amazon. The Luhn algorithm works in 6 simple steps.
+Suppose a user inputs the card number `79927398713` into Amazon to buy a new pair of shoes. The Luhn algorithm works in 6 simple steps.
 
-**1. Starting at the second to last number, and going from right-to-left, get every other number.**
+**1. Starting at the second to last number—and going from right-to-left—get every other number.**
 
 The second-to-last number in this scenario is 1. Every other number in the left direction from 1 are as follows: `1, 8, 3, 2, 9`.
 
@@ -42,7 +42,7 @@ The total is: 70.
 
 `(70 % 10) = 0`, therefore card number `79927398713` is valid.
 
-It's important to note that even a card number sums to a multiple of 10, it doesn't mean that it exists. Just that it passes the valid card number test.
+*It's important to note that even if a card number sums to a multiple of 10, it doesn't mean that it exists. Just that it passes the number test.*
 
 ## Time Complexity
 
